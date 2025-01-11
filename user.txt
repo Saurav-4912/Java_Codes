@@ -1,6 +1,0 @@
-Get the user data..
-processing the date
-
-create an avtar for user.
-
-Change a table structure from database.
