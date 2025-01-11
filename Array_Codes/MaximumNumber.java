@@ -13,7 +13,6 @@ class MaximumNumber {
       int num = sc.nextInt();
       numbers[i] = num;
     }
-
   
     System.out.println("Print array : ");
     for (int j = 0; j < numbers.length; j++) {
