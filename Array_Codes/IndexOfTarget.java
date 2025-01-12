@@ -8,11 +8,12 @@ public class IndexOfTarget {
 
     int[] numbers = {14,25,12,53,2,102,72,97};
     int result = IndexOfTarget.targetElement(number, numbers);
-    if(result == 1){
-      System.out.println("Given number is present in array");
+    if(result != -1){
+      System.out.println("Index of target : "+  result);
     }else{
-      System.out.println("Number not found");
+      System.out.println(result);
     }
+
     sc.close();
   }
 
