@@ -29,7 +29,6 @@ public class Demo {
     System.out.println(f.data);
     System.out.println(f.next.data);
     System.out.println(f.next.next.data);
-    
 
   }
 }
