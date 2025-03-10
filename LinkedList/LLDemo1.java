@@ -78,6 +78,11 @@ class SinglyLinkedListt {
 		return sj.toString();
 }
 
+
+
+public void addLast(int element){
+  add(element);
+}
  
 
 }
@@ -93,5 +98,8 @@ public class LLDemo1 {
     System.out.println(L);
     System.out.println("Size : " + L.size());
     L.display();
+
+    L.addLast(99);
+    System.out.println(L);
   }
 }
