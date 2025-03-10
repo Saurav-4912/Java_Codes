@@ -100,6 +100,27 @@ class SinglyLinkedListt {
     add(element);
   }
 
+  private Node getNodeAt(int index) // 3
+  {
+
+    if (index < 0 || index >= count) {
+      throw new IndexOutOfBoundsException("Index " + index + " out of bounds for length " + count);
+    }
+    Node T = first;
+    for (int i = 0; i < count; i++) {
+      if (i == index) {
+        return T;
+      }
+      T = T.next;
+    }
+    return null;
+  }
+
+  public void show(int index) {
+    Node s = getNodeAt(index);
+    System.out.println(s.data);
+  }
+
 }
 
 public class LLDemo1 {
@@ -109,17 +130,23 @@ public class LLDemo1 {
     L.add(11);
     L.add(22);
     L.add(33);
+    L.add(44);
+    L.add(55);
 
-    System.out.println(L);
+    System.out.println("Before LinkedList : " + L);
     System.out.println("Size : " + L.size());
     // L.display();
 
     // L.addLast(99);
     // System.out.println(L);
 
-    L.addFirst(88);
-
-    System.out.println(L);
+    // L.addFirst(88);
+    try {
+      L.show(-3);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    System.out.println("After LinkedList : " + L);
     System.out.println("Size : " + L.size());
   }
 }
