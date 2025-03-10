@@ -53,37 +53,50 @@ class SinglyLinkedListt {
     System.out.println("null");
   }
 
-   // toString method to display LinkedList
-   public String toString() {
-		
-    // Attempt-1 //No. of times you are creating object and immediatly you are destroying 
-  //   String s = "[";
-  //    for(Node T = first ; T!=null; T=T.next)
-  //     {
-  //      s = s + T.data + ",";
-    
-  //  }
-  //    s = s.substring(0,s.length()-1); 
-  //    s=s+"]"; 
-  //    return s.toString();
-    
-   
+  // toString method to display LinkedList
+  public String toString() {
 
-		StringJoiner sj = new StringJoiner(",", "[", "]");
+    // Attempt-1 //No. of times you are creating object and immediatly you are
+    // destroying
+    // String s = "[";
+    // for(Node T = first ; T!=null; T=T.next)
+    // {
+    // s = s + T.data + ",";
 
-		for (Node T = first; T != null; T = T.next) {
-			sj.add(String.valueOf(T.data));
-		}
+    // }
+    // s = s.substring(0,s.length()-1);
+    // s=s+"]";
+    // return s.toString();
 
-		return sj.toString();
-}
+    StringJoiner sj = new StringJoiner(",", "[", "]");
 
+    for (Node T = first; T != null; T = T.next) {
+      sj.add(String.valueOf(T.data));
+    }
 
+    return sj.toString();
+  }
 
-public void addLast(int element){
-  add(element);
-}
- 
+  public void addFirst(int element) {
+
+    if (first == null) {
+      Node T = new Node(element);
+
+      first = T;
+      last = T;
+      count++;
+    } else {
+      Node T = new Node(element);
+      T.next = first;
+      first = T;
+      count++;
+    }
+
+  }
+
+  public void addLast(int element) {
+    add(element);
+  }
 
 }
 
@@ -97,9 +110,14 @@ public class LLDemo1 {
 
     System.out.println(L);
     System.out.println("Size : " + L.size());
-    L.display();
+    // L.display();
 
-    L.addLast(99);
+    // L.addLast(99);
+    // System.out.println(L);
+
+    L.addFirst(88);
+
     System.out.println(L);
+    System.out.println("Size : " + L.size());
   }
 }
