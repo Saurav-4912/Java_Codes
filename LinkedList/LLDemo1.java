@@ -77,6 +77,7 @@ class SinglyLinkedListt {
     return sj.toString();
   }
 
+  // Add element to first
   public void addFirst(int element) {
 
     if (first == null) {
@@ -94,6 +95,7 @@ class SinglyLinkedListt {
 
   }
 
+  // add element to last
   public void addLast(int element) {
     add(element);
   }
